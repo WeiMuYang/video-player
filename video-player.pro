@@ -1,8 +1,31 @@
 QT       += core gui
+TARGET = VideoPlayer
+
+DESTDIR = bin
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
+
+
+# add lib about FFmpeg for win32
+win32 {
+LIBS += -L$$PWD/lib/SDL2/lib/x86 \
+    -L$$PWD/lib/ffmpeg-4.2.1-win32-dev/lib \
+    -lSDL2 \
+    -lavcodec \
+    -lavdevice \
+    -lavfilter \
+    -lavformat \
+    -lavutil \
+    -lswresample \
+    -lswscale
+
+INCLUDEPATH += src \
+    lib/SDL2/include \
+    lib/ffmpeg-4.2.1-win32-dev/include
+}
+
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
