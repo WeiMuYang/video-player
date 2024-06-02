@@ -19,6 +19,14 @@ Video  Player是一款借助于FFmpeg视频库，进行视频和音频播放的�
 
 目前还没有完成，应该使用json文件。`git clone git@github.com:WeiMuYang/video-player.git` 。
 
+打包方式：
+
+```bash
+# 使用Qt 5.15.2 (MSVC 2019 32-bit)
+cd bin
+windeployqt VideoPlayer.exe 
+```
+
 ## 4 开发计划 
 
 计划开发一套完善的视频播放和传输软件，需要迭代的功能进行了整理，如果有哪些功能见开发文档：[CHANGED-LOG.md](CHANGED-LOG.md)   
